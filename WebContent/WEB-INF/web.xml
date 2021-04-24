@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>Day0424</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+
+    <servlet>
+	  <servlet-name>testController</servlet-name>
+	  <servlet-class>com.the.controller.TestController</servlet-class> <!-- copy qulified name : 자바파일 내 classfile로 지정  -->
+  </servlet> <!-- controller의 어노테이션 지정을 안할 경우 써줘야하는 부분  -->
+  <servlet-mapping>
+  	<servlet-name>testController</servlet-name> <!-- 서블릿 이름 -->
+  	<url-pattern>/TestController</url-pattern> <!-- 언제 처리할지  -->
+  </servlet-mapping>
+
+
+  
+<!--   <jsp-config>
+  	<jsp-property-group>
+  		<url-pattern>/*</url-pattern> :JSP 파일의 url 패턴을 지정
+  		<include-prelude>/common/menu.jsp</include-prelude> 파일의 앞부분에 삽입할 파일 지정
+  		<include-coda></include-coda> 파일의 뒷부분에 삽입할 파일 지정
+  	</jsp-property-group>
+  </jsp-config> -->
+</web-app>
